@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8D7D7"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:cardBackgroundColor="#D1F8D3"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/gdline"
+                app:layout_constraintGuide_percent=".45"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/home"
+                app:layout_constraintBottom_toTopOf="@id/gdline"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintButtons"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#272196F3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintDisplay">
+
+
+
+                <TextView
+                    android:id="@+id/aboutLable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:textSize="@dimen/_20sdp"
+                    android:textAlignment="center"
+                    android:text="Arabic alphabets with picturs"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:textColor="#08C05B"
+                    android:textStyle="italic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/straitLine"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="#63000000"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/aboutLable" />
+
+
+                <Button
+                    android:id="@+id/btn_5"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/round_button"
+                    android:text="ج"
+                    android:onClick="f5"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toStartOf="@id/btn_4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/straitLine" />
+
+                <Button
+                    android:id="@+id/btn_4"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/round_button"
+                    android:text="ث"
+                    android:onClick="f4"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    android:textColor="@color/btnTextColor"
+                    app:layout_constraintEnd_toStartOf="@id/btn_3"
+                    app:layout_constraintStart_toEndOf="@id/btn_5"
+                    app:layout_constraintTop_toTopOf="@id/btn_5" />
+
+                <Button
+                    android:id="@+id/btn_3"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/round_button"
+                    android:text="ت"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    android:onClick="f3"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+
+                    app:layout_constraintEnd_toStartOf="@id/btn_2"
+                    app:layout_constraintStart_toEndOf="@id/btn_4"
+                    app:layout_constraintTop_toTopOf="@id/btn_5" />
+
+                <Button
+                    android:id="@+id/btn_2"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/round_button"
+                    android:text="ب"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    android:onClick="f2"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    app:layout_constraintEnd_toStartOf="@id/btn_1"
+                    app:layout_constraintStart_toEndOf="@id/btn_3"
+                    app:layout_constraintTop_toTopOf="@id/btn_5" />
+
+                <Button
+                    android:id="@+id/btn_1"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/round_button"
+                    android:text="I"
+                    android:textStyle="bold"
+                    android:onClick="f1"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintStart_toEndOf="@id/btn_2"
+                    app:layout_constraintTop_toTopOf="@id/btn_5" />
+
+                <Button
+                    android:id="@+id/btn_10"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/round_button"
+                    android:text="ر"
+                    android:onClick="f10"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="@id/btn_5"
+                    app:layout_constraintStart_toStartOf="@id/btn_5"
+                    app:layout_constraintTop_toBottomOf="@id/btn_5" />
+
+                <Button
+                    android:id="@+id/btn_9"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/round_button"
+                    android:text="ذ"
+                    android:onClick="f9"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="@id/btn_4"
+                    app:layout_constraintStart_toStartOf="@id/btn_4"
+                    app:layout_constraintTop_toTopOf="@id/btn_10"
+
+                    />
+
+                <Button
+                    android:id="@+id/btn_8"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/round_button"
+                    android:text="د"
+                    android:onClick="f8"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="@id/btn_3"
+                    app:layout_constraintStart_toStartOf="@id/btn_3"
+                    app:layout_constraintTop_toTopOf="@id/btn_10"
+
+                    />
+
+                <Button
+                    android:id="@+id/btn_7"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/round_button"
+                    android:text="خ"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    android:onClick="f7"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    app:layout_constraintEnd_toEndOf="@id/btn_2"
+                    app:layout_constraintStart_toStartOf="@id/btn_2"
+                    app:layout_constraintTop_toTopOf="@id/btn_10"
+
+                    />
+
+                <Button
+                    android:id="@+id/btn_6"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/round_button"
+                    android:text="ح"
+                    android:onClick="f6"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="@id/btn_1"
+                    app:layout_constraintStart_toStartOf="@id/btn_1"
+                    app:layout_constraintTop_toTopOf="@id/btn_10"
+
+                    />
+
+                <Button
+                    android:id="@+id/btn_15"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/round_button"
+                    android:text="ض"
+                    android:onClick="f15"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="@id/btn_10"
+                    app:layout_constraintStart_toStartOf="@id/btn_10"
+                    app:layout_constraintTop_toBottomOf="@id/btn_10" />
+
+                <Button
+                    android:id="@+id/btn_14"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/round_button"
+                    android:text="ص"
+                    android:onClick="f14"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="@id/btn_9"
+                    app:layout_constraintStart_toStartOf="@id/btn_9"
+                    app:layout_constraintTop_toTopOf="@id/btn_15"
+
+                    />
+
+                <Button
+                    android:id="@+id/btn_13"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/round_button"
+                    android:text="ش"
+                    android:onClick="f13"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="@id/btn_8"
+                    app:layout_constraintStart_toStartOf="@id/btn_8"
+                    app:layout_constraintTop_toTopOf="@id/btn_15"
+
+                    />
+
+                <Button
+                    android:id="@+id/btn_12"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/round_button"
+                    android:text="س"
+                    android:onClick="f12"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="@id/btn_7"
+                    app:layout_constraintStart_toStartOf="@id/btn_7"
+                    app:layout_constraintTop_toTopOf="@id/btn_15" />
+
+                <Button
+                    android:id="@+id/btn_11"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/round_button"
+                    android:text="ز"
+                    android:onClick="f11"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="@id/btn_6"
+                    app:layout_constraintStart_toStartOf="@id/btn_6"
+                    app:layout_constraintTop_toTopOf="@id/btn_15" />
+
+                <Button
+                    android:id="@+id/btn_20"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/round_button"
+                    android:text="ف"
+                    android:onClick="f20"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="@id/btn_15"
+                    app:layout_constraintStart_toStartOf="@id/btn_15"
+                    app:layout_constraintTop_toBottomOf="@id/btn_15" />
+
+                <Button
+                    android:id="@+id/btn_19"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/round_button"
+                    android:text="غ"
+                    android:onClick="f19"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+
+                    android:textSize="@dimen/_17sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/btn_14"
+                    app:layout_constraintStart_toStartOf="@id/btn_14"
+                    app:layout_constraintTop_toTopOf="@id/btn_20" />
+
+                <Button
+                    android:id="@+id/btn_17"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/round_button"
+                    android:text="ظ"
+                    android:onClick="f17"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    app:layout_constraintEnd_toEndOf="@id/btn_12"
+                    app:layout_constraintStart_toStartOf="@id/btn_12"
+                    app:layout_constraintTop_toTopOf="@id/btn_20" />
+                <Button
+                    android:id="@+id/btn_18"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/round_button"
+                    android:text="ع"
+                    android:onClick="f18"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    android:textColor="@color/btnTextColor"
+                    app:layout_constraintEnd_toEndOf="@id/btn_13"
+                    app:layout_constraintStart_toStartOf="@id/btn_13"
+                    app:layout_constraintTop_toTopOf="@id/btn_20" />
+                <Button
+                    android:id="@+id/btn_16"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/round_button"
+                    android:text="ط"
+                    android:onClick="f16"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+
+                    app:layout_constraintEnd_toEndOf="@id/btn_11"
+                    app:layout_constraintStart_toStartOf="@id/btn_11"
+                    app:layout_constraintTop_toTopOf="@id/btn_20" />
+                <Button
+                    android:id="@+id/btn_21"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/round_button"
+                    android:text="ق"
+                    android:onClick="f21"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="@id/btn_16"
+                    app:layout_constraintStart_toStartOf="@id/btn_16"
+                    app:layout_constraintTop_toBottomOf="@id/btn_16" />
+                <Button
+                    android:id="@+id/btn_22"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/round_button"
+                    android:text="ك"
+                    android:onClick="f22"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="@id/btn_17"
+                    app:layout_constraintStart_toStartOf="@id/btn_17"
+                    app:layout_constraintTop_toBottomOf="@id/btn_17" />
+                <Button
+                    android:id="@+id/btn_23"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/round_button"
+                    android:text="ل"
+                    android:onClick="f23"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="@id/btn_18"
+                    app:layout_constraintStart_toStartOf="@id/btn_18"
+                    app:layout_constraintTop_toBottomOf="@id/btn_18" />
+                <Button
+                    android:id="@+id/btn_24"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/round_button"
+                    android:text="م"
+                    android:onClick="f24"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="@id/btn_19"
+                    app:layout_constraintStart_toStartOf="@id/btn_19"
+                    app:layout_constraintTop_toBottomOf="@id/btn_19" />
+                <Button
+                    android:id="@+id/btn_25"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/round_button"
+                    android:text="ن"
+                    android:onClick="f25"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="@id/btn_20"
+                    app:layout_constraintStart_toStartOf="@id/btn_20"
+                    app:layout_constraintTop_toBottomOf="@id/btn_20" />
+                <Button
+                    android:id="@+id/btn_26"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/round_button"
+                    android:text="و"
+                    android:onClick="f26"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="@id/btn_21"
+                    app:layout_constraintStart_toStartOf="@id/btn_21"
+                    app:layout_constraintTop_toBottomOf="@id/btn_21" />
+                <Button
+                    android:id="@+id/btn_27"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/round_button"
+                    android:text="هـ"
+                    android:onClick="f27"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="@id/btn_22"
+                    app:layout_constraintStart_toStartOf="@id/btn_22"
+                    app:layout_constraintTop_toBottomOf="@id/btn_22" />
+                <Button
+                    android:id="@+id/btn_28"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/round_button"
+                    android:text="ء"
+                    android:onClick="f28"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="@id/btn_24"
+                    app:layout_constraintStart_toStartOf="@id/btn_24"
+                    app:layout_constraintTop_toBottomOf="@id/btn_24" />
+                <Button
+                    android:id="@+id/btn_29"
+                    android:layout_width="@dimen/_51sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/round_button"
+                    android:text="ي"
+                    android:onClick="f29"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btnTextColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="@id/btn_25"
+                    app:layout_constraintStart_toStartOf="@id/btn_25"
+                    app:layout_constraintTop_toBottomOf="@id/btn_25" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
